@@ -4,7 +4,7 @@ module.exports = {
     mode: 'development',
     entry: {
         bundle: './src/index.js'
-    }, 
+    },
     ontput: {
         path: path.join(__dirname, 'dist'),
         filename: '[name].js'
@@ -23,5 +23,8 @@ module.exports = {
     },
     devServer: {
         open: true
+    },
+    stats: {
+        children: false,
     },
 }
