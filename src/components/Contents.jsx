@@ -1,31 +1,24 @@
-import React, { useState } from 'react'
-
+import React, { useState } from 'react';
 
 const Contents = ({ content, id, deleteHabit }) => {
 
-    const [isDone, setIsDone] = useState(false)
+    const [isDone, setIsDone] = useState(false);
 
-    // const handleDelete = () => {
-    //     deleteHabit(id)
-    // }
-
-    return(
+    return (
         <>
-           <li>
-               <input 
+            <li>
+                <input
                     type="checkbox"
                     checked={isDone}
-                    onChange={() => {
-                        setIsDone(!isDone)
-                    }
-                }/>
-               <span style={{ textDecoration: isDone ? 'line-through' : 'none' }}>
-                   {content}
+                    onChange={() => { setIsDone(!isDone) }}
+                />
+                <span style={{ textDecoration: isDone ? 'line-through' : 'none' }}>
+                    {content}
                 </span>
-               <button onClick={() => deleteHabit(id)}>削除する</button>
-           </li>
+                <button onClick={() => deleteHabit(id)}>削除</button>
+            </li>
         </>
-    )
-}
+    );
+};
 
 export default Contents
